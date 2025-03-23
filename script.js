@@ -1,8 +1,8 @@
 // Aquí puedes reemplazar estos enlaces con los enlaces a tus imágenes en GitHub
 const images = [
-   'https://raw.githubusercontent.com/Liorenday/liore-crear-pose.github.com/main/01%20-%2052b7cfe2d80a2531268e6fd543be9059.jpg',
-   'https://raw.githubusercontent.com/Liorenday/liore-crear-pose.github.com/main/01%20-%2052b7cfe2d80a2531268e6fd543be9059.jpg',
-   'https://raw.githubusercontent.com/Liorenday/liore-crear-pose.github.com/main/01%20-%2052b7cfe2d80a2531268e6fd543be9059.jpg',
+   'https://raw.githubusercontent.com/Liorenday/liore-crear-pose.github.com/refs/heads/main/01%20-%2052b7cfe2d80a2531268e6fd543be9059.jpg',
+   'https://raw.githubusercontent.com/Liorenday/liore-crear-pose.github.com/refs/heads/main/01%20-%2052b7cfe2d80a2531268e6fd543be9059.jpg',
+   'https://raw.githubusercontent.com/Liorenday/liore-crear-pose.github.com/refs/heads/main/01%20-%2052b7cfe2d80a2531268e6fd543be9059.jpg',
 ];
 
 // Función para obtener imágenes aleatorias
