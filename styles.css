@@ -52,7 +52,9 @@ button:hover {
     background-color: #e141a7;
 }
 
-/* Lightbox */
+/* ========================
+   🎯 LIGHTBOX (Imagen en grande)
+======================== */
 .lightbox {
     display: none;
     position: fixed;
@@ -67,9 +69,13 @@ button:hover {
     cursor: pointer;
 }
 
+/* Imagen grande manteniendo proporciones */
 .lightbox img {
-    max-width: 90%;
-    max-height: 90%;
+    width: auto;              /* Mantiene el ancho original */
+    height: auto;             /* Mantiene la altura original */
+    max-width: 90vw;          /* Máximo 90% del ancho de la ventana */
+    max-height: 90vh;         /* Máximo 90% de la altura de la ventana */
+    object-fit: contain;      /* Asegura que la imagen no se deforme */
     border-radius: 10px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s;
