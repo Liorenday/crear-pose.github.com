@@ -1,7 +1,7 @@
 // Aquí puedes reemplazar estos enlaces con los enlaces a tus imágenes en GitHub
 const images = [
-    '01 - 52b7cfe2d80a2531268e6fd543be9059.jpg',
-    '01 - 52b7cfe2d80a2531268e6fd543be9059.jpg',
+    'https://github.com/Liorenday/liore-crear-pose.github.com/blob/main/01%20-%2052b7cfe2d80a2531268e6fd543be9059.jpg?raw=true',
+    'https://github.com/Liorenday/liore-crear-pose.github.com/blob/main/01%20-%2052b7cfe2d80a2531268e6fd543be9059.jpg?raw=true',
     
 ];
 
