@@ -9,23 +9,26 @@ body {
 
 h1 {
     color: #333;
+    font-size: 28px;
 }
 
 /* Contenedor de imágenes */
 .image-container {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;  /* Para que las imágenes se acomoden en varias líneas si es necesario */
     gap: 15px;
     margin-bottom: 20px;
 }
 
 img {
-    width: 300px;
+    width: 100%;
+    max-width: 300px;   /* Tamaño máximo en escritorio */
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease-in-out;
-    cursor: pointer; /* Cursor de clic */
+    cursor: pointer;
 }
 
 img:hover {
@@ -36,19 +39,20 @@ img:hover {
 button {
     background-color: #4CAF50; /* Verde */
     color: white;
-    padding: 10px 20px;
+    padding: 12px 25px;
     font-size: 16px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s;
+    margin-top: 20px;
 }
 
 button:hover {
     background-color: #45a049;
 }
 
-/* Estilo del lightbox */
+/* Lightbox */
 .lightbox {
     display: none;
     position: fixed;
@@ -73,4 +77,49 @@ button:hover {
 
 .lightbox img:hover {
     transform: scale(1.03);
+}
+
+/* ========================
+   🎯 RESPONSIVE DESIGN 🎯
+======================== */
+
+/* Para pantallas medianas (tablets) */
+@media (max-width: 768px) {
+    .image-container {
+        gap: 10px;
+    }
+    
+    img {
+        max-width: 45%;  /* Dos imágenes por fila */
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}
+
+/* Para pantallas pequeñas (celulares) */
+@media (max-width: 480px) {
+    .image-container {
+        flex-direction: column;  /* Imágenes en una sola columna */
+        align-items: center;
+    }
+    
+    img {
+        max-width: 90%;  /* Ocupa casi todo el ancho */
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
 }
