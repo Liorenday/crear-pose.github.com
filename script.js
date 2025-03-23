@@ -1,7 +1,7 @@
 // Asegúrate de que las URLs sean correctas
 const images = [
     'https://raw.githubusercontent.com/Liorenday/liore-crear-pose.github.com/main/01%20-%2052b7cfe2d80a2531268e6fd543be9059.jpg',
-    'https://raw.githubusercontent.com/Liorenday/liore-crear-pose.github.com/main/01%20-%2052b7cfe2d80a2531268e6fd543be9059.jpg',
+    'https://github.com/Liorenday/liore-crear-pose.github.com/blob/main/02%20-%206752e14dcf9e1ac9f531eae0b23e0880.jpg?raw=true',
     'https://raw.githubusercontent.com/Liorenday/liore-crear-pose.github.com/main/01%20-%2052b7cfe2d80a2531268e6fd543be9059.jpg',
 ];
 
