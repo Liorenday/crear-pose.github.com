@@ -4,36 +4,27 @@ const images = [
     'https://raw.githubusercontent.com/Liorenday/liore-crear-pose.github.com/main/03%20-%203d668fb9341c6e0f6c53624354b5e038.jpg',
 ];
 
-// Función para obtener imágenes aleatorias
+// 🔥 Función para obtener imágenes aleatorias y evitar caché
 function getRandomImages() {
-    const randomIndexes = new Set();
+    const randomIndexes = [];
 
-    while (randomIndexes.size < 3) {
+    while (randomIndexes.length < 3) {
         const randomIndex = Math.floor(Math.random() * images.length);
-        randomIndexes.add(randomIndex);
+        if (!randomIndexes.includes(randomIndex)) {
+            randomIndexes.push(randomIndex);
+        }
     }
 
-    const randomArray = [...randomIndexes];
+    console.log('Imágenes seleccionadas:', randomIndexes);  // Verificar si selecciona aleatoriamente
 
-    // Validar imágenes antes de asignarlas
-    randomArray.forEach((index, i) => {
-        const imgElement = document.getElementById(`image${i + 1}`);
-        const imgUrl = images[index];
-
-        // Verificar si la URL es válida antes de asignarla
-        fetch(imgUrl)
-            .then(response => {
-                if (response.ok) {
-                    imgElement.src = imgUrl;
-                } else {
-                    imgElement.alt = 'Imagen no disponible';
-                }
-            })
-            .catch(() => {
-                imgElement.alt = 'Error al cargar la imagen';
-            });
-    });
+    // Evitar la caché agregando un parámetro único con la fecha actual
+    document.getElementById('image1').src = `${images[randomIndexes[0]]}?t=${new Date().getTime()}`;
+    document.getElementById('image2').src = `${images[randomIndexes[1]]}?t=${new Date().getTime()}`;
+    document.getElementById('image3').src = `${images[randomIndexes[2]]}?t=${new Date().getTime()}`;
 }
 
-// Cargar las imágenes al iniciar la página
-window.onload = getRandomImages;
+// 🚀 Cargar las imágenes al iniciar la página
+window.onload = () => {
+    console.log('Cargando imágenes aleatorias...');
+    getRandomImages();
+};
