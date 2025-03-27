@@ -16,16 +16,26 @@
     <img id="image3" src="" alt="Imagen Aleatoria 3" onclick="openLightbox(this.src)">
 </div>
 
-<button onclick="getRandomImages()">Cargar Nuevas Imágenes 🔄</button>
+<!-- Contenedor para centrar el botón y el enlace -->
+<div style="text-align: center; margin-top: 20px;">
+    <button onclick="getRandomImages()" 
+            style="background-color: #ff77ff; color: white; border: none; padding: 10px 20px; font-size: 16px; border-radius: 8px; cursor: pointer;">
+        Cargar Nuevas Imágenes 🔄
+    </button>
+
+    <!-- -->
+    <div style="margin-top: 10px;">
+        <a href="https://www.instagram.com/liorenday" target="_blank" 
+           style="text-decoration: none; color: black; font-weight: bold; font-size: 16px;">
+           by @liorenday
+        </a>
+    </div>
+</div>
 
 <!-- Lightbox (imagen en grande) -->
 <div id="lightbox" class="lightbox" onclick="closeLightbox()">
     <img id="lightbox-img" src="" alt="Imagen en grande">
 </div>
-
-    <a href="https://www.instagram.com/liorenday" target="_blank" style="text-decoration: none; color: inherit;">by @liorenday</a>
-
-    
 
 <script src="script.js"></script> <!-- Enlace al JS -->
 </body>
