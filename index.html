@@ -16,20 +16,23 @@
     <img id="image3" src="" alt="Imagen Aleatoria 3" onclick="openLightbox(this.src)">
 </div>
 
-<!-- Contenedor para centrar -->
-<div class="center-container">
-    <button class="btn" onclick="getRandomImages()">Cargar Nuevas Imágenes 🔄</button>
+<!-- Contenedor para centrar el botón y el enlace -->
+<div style="text-align: center; margin-top: 20px;">
+    <button onclick="getRandomImages()">
+        Cargar Nuevas Imágenes 🔄
+    </button>
 
-    <div>
-        <a href="https://www.instagram.com/liorenday" target="_blank" class="link">@liorenday</a>
+    <!-- Contenedor con clase 'credits' -->
+    <div class="credits">
+        <a href="https://www.instagram.com/liorenday" target="_blank">by @liorenday</a>
     </div>
 </div>
 
-<!-- Lightbox -->
+<!-- Lightbox (imagen en grande) -->
 <div id="lightbox" class="lightbox" onclick="closeLightbox()">
     <img id="lightbox-img" src="" alt="Imagen en grande">
 </div>
 
-<script src="script.js"></script>
+<script src="script.js"></script> <!-- Enlace al JS -->
 </body>
 </html>
