@@ -16,14 +16,14 @@ h1 {
 .image-container {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;  /* Para que las imágenes se acomoden en varias líneas si es necesario */
+    flex-wrap: wrap;
     gap: 15px;
     margin-bottom: 20px;
 }
 
 img {
     width: 100%;
-    max-width: 300px;   /* Tamaño máximo en escritorio */
+    max-width: 300px;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -36,9 +36,9 @@ img:hover {
 }
 
 /* ========================
-   🎯 BOTÓN CON HOVER 🎯
+   🎯 BOTÓN
 ======================== */
-button {
+.btn {
     background-color: #f778f0; /* Rosa */
     color: white;
     padding: 12px 25px;
@@ -46,18 +46,32 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s, color 0.3s;  /* Suavidad */
+    transition: background 0.3s, color 0.3s;
     margin-top: 20px;
 }
 
-/* Aumentar la especificidad para que funcione */
-button:hover {
-    background-color: #e141a7 !important;  /* Forzar el hover */
+.btn:hover {
+    background-color: #e141a7;  /* Color hover */
     color: #fff;
 }
 
 /* ========================
-   🎯 LIGHTBOX (Imagen en grande)
+   🎯 ENLACE
+======================== */
+.link {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.link:hover {
+    color: #f778f0;  /* Rosa al pasar el mouse */
+}
+
+/* ========================
+   🎯 LIGHTBOX
 ======================== */
 .lightbox {
     display: none;
@@ -73,13 +87,12 @@ button:hover {
     cursor: pointer;
 }
 
-/* Imagen grande manteniendo proporciones */
 .lightbox img {
-    width: auto;              /* Mantiene el ancho original */
-    height: auto;             /* Mantiene la altura original */
-    max-width: 90vw;          /* Máximo 90% del ancho de la ventana */
-    max-height: 90vh;         /* Máximo 90% de la altura de la ventana */
-    object-fit: contain;      /* Asegura que la imagen no se deforme */
+    width: auto;
+    height: auto;
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
     border-radius: 10px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s;
@@ -90,60 +103,43 @@ button:hover {
 }
 
 /* ========================
-   🎯 RESPONSIVE DESIGN 🎯
+   🎯 RESPONSIVE DESIGN
 ======================== */
-
-/* Para pantallas medianas (tablets) */
 @media (max-width: 768px) {
     .image-container {
         gap: 10px;
     }
     
     img {
-        max-width: 45%;  /* Dos imágenes por fila */
+        max-width: 45%;
     }
 
     h1 {
         font-size: 24px;
     }
 
-    button {
+    .btn {
         font-size: 14px;
         padding: 10px 20px;
     }
 }
 
-/* Para pantallas pequeñas (celulares) */
 @media (max-width: 480px) {
     .image-container {
-        flex-direction: column;  /* Imágenes en una sola columna */
+        flex-direction: column;
         align-items: center;
     }
     
     img {
-        max-width: 90%;  /* Ocupa casi todo el ancho */
+        max-width: 90%;
     }
 
     h1 {
         font-size: 20px;
     }
 
-    button {
+    .btn {
         font-size: 14px;
         padding: 8px 15px;
     }
-}
-
-/* ========================
-   🎯 EFECTO HOVER EN EL ENLACE 🎯
-======================== */
-a {
-    text-decoration: none;
-    color: #333;  /* Color original */
-    transition: color 0.3s ease; /* Transición suave */
-}
-
-/* Aumentar la especificidad para que funcione */
-a:hover {
-    color: #f778f0 !important;  /* Rosa al pasar el mouse */
 }
