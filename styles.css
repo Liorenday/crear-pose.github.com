@@ -35,7 +35,9 @@ img:hover {
     transform: scale(1.05);
 }
 
-/* Botón */
+/* ========================
+   🎯 BOTÓN CON HOVER 🎯
+======================== */
 button {
     background-color: #f778f0; /* Rosa */
     color: white;
@@ -44,12 +46,14 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background 0.3s, color 0.3s;  /* Suavidad */
     margin-top: 20px;
 }
 
+/* Aumentar la especificidad para que funcione */
 button:hover {
-    background-color: #e141a7;
+    background-color: #e141a7 !important;  /* Forzar el hover */
+    color: #fff;
 }
 
 /* ========================
@@ -139,6 +143,7 @@ a {
     transition: color 0.3s ease; /* Transición suave */
 }
 
+/* Aumentar la especificidad para que funcione */
 a:hover {
-    color: #f778f0;  /* Color rosa al pasar el mouse */
+    color: #f778f0 !important;  /* Rosa al pasar el mouse */
 }
